@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Cli;
+
 import java.util.Random;
 import java.util.Scanner;
 public class Greet {
@@ -8,15 +10,20 @@ public class Greet {
         Scanner scanner = new Scanner(System.in);
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
-        String corectanswer;
         Random rand = new Random();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+
+        // логика игры
+        String corectanswer;
         for (int i = 0; i < 3; i++) {
             int number = (rand.nextInt(150) + 1);
+            // общение
             System.out.println("Question: " + number);
             String answerUser = scanner.next();
             System.out.println("Your answer: " + answerUser);
+            //узнаем правильный результат
             boolean result = number % 2 == 0;
+            //устанавливаем значение для печати
             if (!result) {
                 corectanswer = "no";
             } else
@@ -34,7 +41,7 @@ public class Greet {
             }
         }
         if (finishGame)
-            System.out.println("Congratulations, " + userName);
+            System.out.println("Congratulations, " + userName + "!");
     }
 }
 
