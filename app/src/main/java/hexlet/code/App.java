@@ -1,10 +1,9 @@
 package hexlet.code;
-import hexlet.code.games.Calc;
-import hexlet.code.games.Greet;
 
 import java.util.Scanner;
+
 public class App {
-    public static void main(String[] args) {
+    public static int chooseGames() {
         Scanner scanner = new Scanner(System.in);
         int gameOne = 1;
         int gameTwo = 2;
@@ -16,10 +15,9 @@ public class App {
         System.out.println("0 - Exit");
         int election = scanner.nextInt();
         System.out.println("Your choice: " + election);
-        if (election == gameOne)
-            Greet.gamenumberone();
-        else if (election == gameThree)
-            Calc.gamenumbethree();
+        return election;
     }
-}
-
+    public static void main(String[] args) {
+        Engine.logikaGames();
+        }
+    }
