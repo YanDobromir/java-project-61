@@ -24,22 +24,25 @@ public class Engine {
     }
     //get answerUser
     public static void printUserAnswer(String answerUser) {
-        System.out.println("Your answer: " + answerUser);
+        System.out.println(answerUser);
     }
     public static void printUserAnswer(int answerUser) {
-        System.out.println("Your answer: " + answerUser);
+        System.out.println(answerUser);
     }
 
     //question tags
     public static void printNumber(int data) {
         System.out.println("Question: " + data);
+        System.out.print("Your answer: ");
     }
     public static void printNumber(int data, int data2, char a) {
         System.out.println("Question: " + data + " " + a + " " + data2);
+        System.out.print("Your answer: ");
     }
 
     public static void printNumber(int data, int data2) {
         System.out.println("Question: " + data + " " + " " + data2);
+        System.out.print("Your answer: ");
     }
 
     public static void printNumber(int[] data, int step, int numbernot) {
@@ -81,11 +84,14 @@ public class Engine {
         return result;
     }
 
-    public static void logikaMenu(int choiseUser) {
+    public static void logikaMenu(int choiseUser, String userName) {
         Scanner scanner = new Scanner(System.in);
-        String userName = Cli.getUserName(); //get name
         boolean resultGames = true;
         for (int a = 0; a < 3; a++) {
+            if (choiseUser == 1) {
+                resultGames = false;
+                break;
+            }
             if (choiseUser == 2) {
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
                 int number = randome(30);
@@ -132,7 +138,7 @@ public class Engine {
                 if (!resultGames) {
                     break;
                 }
-            } else {
+            } else if (choiseUser == 6) {
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                 int numberOne = randome(100);
                 printNumber(numberOne);
