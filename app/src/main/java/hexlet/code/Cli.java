@@ -11,4 +11,3 @@ public class Cli {
         return scanner.next();
     }
 }
-

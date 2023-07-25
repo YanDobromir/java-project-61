@@ -14,4 +14,3 @@ public class GCD {
         return nod;
     }
 }
-
