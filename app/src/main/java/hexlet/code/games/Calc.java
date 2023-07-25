@@ -1,11 +1,12 @@
 package hexlet.code.games;
 public class Calc {
     public static int truthAnswer(char x, int a, int b) {
-        if (x == '+')
+        if (x == '+') {
             return a + b;
-        else if (x == '-')
+        } else if (x == '-') {
             return a - b;
-        else
+        } else {
             return a * b;
+        }
     }
 }

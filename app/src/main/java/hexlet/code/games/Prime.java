@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 public class Prime {
-    public static boolean prime(int q) {
+    public static String prime(int q) {
         boolean result = true;
         for (int i = 2; i < q; i++) {
             if (q % i == 0) {
@@ -9,8 +9,6 @@ public class Prime {
                 break;
             }
         }
-        return result;
-
-
+        return (result) ? "yes" : "no";
     }
 }
