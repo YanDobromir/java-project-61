@@ -151,7 +151,7 @@ public class Engine {
             }
         }
         if  (resultGames) {
-            System.out.println("Congratulations, " + userName);
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
 }
