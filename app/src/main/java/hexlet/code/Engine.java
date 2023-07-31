@@ -52,7 +52,7 @@ public class Engine {
             sum = sum + step;
             data[i] = sum;
             if (i == numbernot) {
-                System.out.print(" .. ");
+                System.out.print(".. ");
             } else {
                 System.out.print(data[i] + " ");
             }
