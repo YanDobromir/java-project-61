@@ -103,7 +103,7 @@ public class Engine {
                     break;
                 }
             } else if (choiseUser == 3) {
-                System.out.println("What is the result of the n?");
+                System.out.println("What is the result of the expression?");
                 int numberOne = randome(100);
                 int numberTwo = randome(100);
                 char operator = getArandomOperator();
