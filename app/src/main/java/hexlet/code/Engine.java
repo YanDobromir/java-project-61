@@ -41,7 +41,7 @@ public class Engine {
     }
 
     public static void printNumber(int data, int data2) {
-        System.out.println("Question: " + data + " " + " " + data2);
+        System.out.println("Question: " + data + " " + data2);
         System.out.print("Your answer: ");
     }
 
