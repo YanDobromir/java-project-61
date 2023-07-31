@@ -46,7 +46,7 @@ public class Engine {
     }
 
     public static void printNumber(int[] data, int step, int numbernot) {
-        System.out.println("Question: ");
+        System.out.print("Question: ");
         int sum = 0;
         for (int i = 0; i < data.length; i++) {
             sum = sum + step;
