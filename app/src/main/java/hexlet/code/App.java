@@ -20,6 +20,7 @@ public class App {
             return 400;
         }
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
@@ -30,8 +31,8 @@ public class App {
         System.out.println(5 + " - Progression");
         System.out.println(6 + " - Prime");
         System.out.println("0 - Exit");
+        System.out.print("Your choice: ");
         String choiseUserString = scanner.next(); //ChoiseUser
-        System.out.println("Your choice: " + choiseUserString);
         int choiseUser = getIntfromString(choiseUserString);
         if (choiseUser == 0) {
             System.exit(0);
