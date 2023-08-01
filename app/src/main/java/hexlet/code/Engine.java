@@ -15,7 +15,8 @@ public class Engine {
     //get a random operator
     public static char getArandomOperator() {
         Random rand = new Random();
-        int operator = (rand.nextInt(3) + 1);
+        int quantityOperator = 3;
+        int operator = (rand.nextInt(quantityOperator) + 1);
         return switch (operator) {
             case 1 -> '+';
             case 2 -> '-';
@@ -87,14 +88,17 @@ public class Engine {
     public static void logikaMenu(int choiseUser, String userName) {
         Scanner scanner = new Scanner(System.in);
         boolean resultGames = true;
-        for (int a = 0; a < 3; a++) {
+        int quantityGames = 3;
+        int quantityNumberforGames = 100;
+        for (int a = 0; a < quantityGames; a++) {
             if (choiseUser == 1) {
                 resultGames = false;
                 break;
             }
             if (choiseUser == 2) {
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                int number = randome(30);
+                int quantityNumbers = 30;
+                int number = randome(quantityNumbers);
                 printNumber(number);
                 String answeUser = scanner.next();
                 printUserAnswer(answeUser);
@@ -104,8 +108,8 @@ public class Engine {
                 }
             } else if (choiseUser == 3) {
                 System.out.println("What is the result of the expression?");
-                int numberOne = randome(100);
-                int numberTwo = randome(100);
+                int numberOne = randome(quantityNumberforGames);
+                int numberTwo = randome(quantityNumberforGames);
                 char operator = getArandomOperator();
                 printNumber(numberOne, numberTwo, operator);
                 int answeUser = scanner.nextInt();
@@ -116,8 +120,8 @@ public class Engine {
                 }
             } else if (choiseUser == 4) {
                 System.out.println("Find the greatest common divisor of given numbers.");
-                int numberOne = randome(100);
-                int numberTwo = randome(100);
+                int numberOne = randome(quantityNumberforGames);
+                int numberTwo = randome(quantityNumberforGames);
                 printNumber(numberOne, numberTwo);
                 int answeUser = scanner.nextInt();
                 printUserAnswer(answeUser);
@@ -140,7 +144,7 @@ public class Engine {
                 }
             } else if (choiseUser == 6) {
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-                int numberOne = randome(100);
+                int numberOne = randome(quantityNumberforGames);
                 printNumber(numberOne);
                 String answeUser = scanner.next();
                 printUserAnswer(answeUser);

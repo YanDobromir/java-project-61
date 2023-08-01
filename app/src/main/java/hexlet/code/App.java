@@ -2,22 +2,31 @@ package hexlet.code;
 import java.util.Scanner;
 public class App {
     public static int getIntfromString(String choiseUserString) {
+        int choiseUserNamber;
         if (choiseUserString.equalsIgnoreCase("0")) {
-            return 0;
+            choiseUserNamber = 0;
+            return choiseUserNamber;
         } else if (choiseUserString.equalsIgnoreCase("1")) {
-            return 1;
+            choiseUserNamber = 1;
+            return choiseUserNamber;
         } else if (choiseUserString.equalsIgnoreCase("2")) {
-            return 2;
+            choiseUserNamber = 2;
+            return  choiseUserNamber;
         } else if (choiseUserString.equalsIgnoreCase("3")) {
-            return 3;
+            choiseUserNamber = 3;
+            return  choiseUserNamber;
         } else if (choiseUserString.equalsIgnoreCase("4")) {
-            return 4;
+            choiseUserNamber = 4;
+            return  choiseUserNamber;
         } else if (choiseUserString.equalsIgnoreCase("5")) {
-            return 5;
+            choiseUserNamber = 5;
+            return  choiseUserNamber;
         } else if (choiseUserString.equalsIgnoreCase("6")) {
-            return 6;
+            choiseUserNamber = 6;
+            return  choiseUserNamber;
         } else {
-            return 400;
+            choiseUserNamber = 7;
+            return  choiseUserNamber;
         }
     }
 
