@@ -15,9 +15,8 @@ public class Engine {
     //get a random operator
     public static char getArandomOperator() {
         Random rand = new Random();
-        var quantityOperator = 2;
-        var operatorChoise = (rand.nextInt(quantityOperator) + 1);
-        char[] operator = {'+','-','*'};
+        char[] operator = {'+', '-', '*'};
+        var operatorChoise = (rand.nextInt(operator.length));
         return operator[operatorChoise];
     }
     //get answerUser
