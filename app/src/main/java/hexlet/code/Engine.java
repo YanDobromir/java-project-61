@@ -15,15 +15,10 @@ public class Engine {
     //get a random operator
     public static char getArandomOperator() {
         Random rand = new Random();
-
         var quantityOperator = 3;
-
-        int operator = (rand.nextInt(quantityOperator) + 1);
-        return switch (operator) {
-            case 1 -> '+';
-            case 2 -> '-';
-            default -> '*';
-        };
+        var operatorChoise = (rand.nextInt(quantityOperator) + 1);
+        char[] operator = {'+','-','*'};
+        return operator[operatorChoise];
     }
     //get answerUser
     public static void printUserAnswer(String answerUser) {
