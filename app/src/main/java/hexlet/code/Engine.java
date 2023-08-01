@@ -15,7 +15,7 @@ public class Engine {
     //get a random operator
     public static char getArandomOperator() {
         Random rand = new Random();
-        var quantityOperator = 3;
+        var quantityOperator = 2;
         var operatorChoise = (rand.nextInt(quantityOperator) + 1);
         char[] operator = {'+','-','*'};
         return operator[operatorChoise];
