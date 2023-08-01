@@ -15,7 +15,9 @@ public class Engine {
     //get a random operator
     public static char getArandomOperator() {
         Random rand = new Random();
-        int quantityOperator = 3;
+
+        var quantityOperator = 3;
+
         int operator = (rand.nextInt(quantityOperator) + 1);
         return switch (operator) {
             case 1 -> '+';
@@ -88,16 +90,26 @@ public class Engine {
     public static void logikaMenu(int choiseUser, String userName) {
         Scanner scanner = new Scanner(System.in);
         boolean resultGames = true;
-        int quantityGames = 3;
-        int quantityNumberforGames = 100;
+
+        var quantityGames = 3;
+        var quantityNumberforGames = 100;
+        var gameOne = 1;
+        var gameTwo = 2;
+        var gameThree = 3;
+        var gameFour = 4;
+        var gameFive = 5;
+        var gameSix = 6;
+
         for (int a = 0; a < quantityGames; a++) {
-            if (choiseUser == 1) {
+            if (choiseUser == gameOne) {
                 resultGames = false;
                 break;
             }
-            if (choiseUser == 2) {
+            if (choiseUser == gameTwo) {
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                int quantityNumbers = 30;
+
+                var quantityNumbers = 30;
+
                 int number = randome(quantityNumbers);
                 printNumber(number);
                 String answeUser = scanner.next();
@@ -106,7 +118,7 @@ public class Engine {
                 if (!resultGames) {
                     break;
                 }
-            } else if (choiseUser == 3) {
+            } else if (choiseUser == gameThree) {
                 System.out.println("What is the result of the expression?");
                 int numberOne = randome(quantityNumberforGames);
                 int numberTwo = randome(quantityNumberforGames);
@@ -118,7 +130,7 @@ public class Engine {
                 if (!resultGames) {
                     break;
                 }
-            } else if (choiseUser == 4) {
+            } else if (choiseUser == gameFour) {
                 System.out.println("Find the greatest common divisor of given numbers.");
                 int numberOne = randome(quantityNumberforGames);
                 int numberTwo = randome(quantityNumberforGames);
@@ -129,10 +141,13 @@ public class Engine {
                 if (!resultGames) {
                     break;
                 }
-            } else if (choiseUser == 5) {
+            } else if (choiseUser == gameFive) {
                 System.out.println("What number is missing in the progression?");
-                int numberStep = randome(10); // Шаг
-                int[] numbers = new int[10];
+
+                var quantityNumbGameFive = 10;
+                int numberStep = randome(quantityNumbGameFive); // Шаг
+
+                int[] numbers = new int[quantityNumbGameFive];
                 int numbernot = randome(numbers.length - 1);
                 printNumber(numbers, numberStep, numbernot);
                 int answeUser = scanner.nextInt();
@@ -142,7 +157,7 @@ public class Engine {
                 if (!resultGames) {
                     break;
                 }
-            } else if (choiseUser == 6) {
+            } else if (choiseUser == gameSix) {
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                 int numberOne = randome(quantityNumberforGames);
                 printNumber(numberOne);
