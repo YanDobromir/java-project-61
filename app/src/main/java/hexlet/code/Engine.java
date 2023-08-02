@@ -10,6 +10,7 @@ public class Engine {
     public static final int QUANTITYGAMES = 3;
     public static final int QUANTITNUMBERYGAMES = 100;
     public static final int QUANTITNUMBERYGAMEINFIVE = 10;
+    public static final int QUANTITNUMBERS = 30;
     //get a random number
     public static int randome(int k) {
         Random rand = new Random();
@@ -105,9 +106,9 @@ public class Engine {
             if (((choiseUser.equalsIgnoreCase(gameTwo)))) {
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-                var quantityNumbers = 30;
 
-                int number = randome(quantityNumbers);
+
+                int number = randome(QUANTITNUMBERS);
                 printNumber(number);
                 String answeUser = scanner.next();
                 printUserAnswer(answeUser);
