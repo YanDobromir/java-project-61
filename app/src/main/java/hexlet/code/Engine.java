@@ -7,6 +7,9 @@ import hexlet.code.games.Prime;
 import java.util.Random;
 import java.util.Scanner;
 public class Engine {
+    public static final int QUANTITYGAMES = 3;
+    public static final int QUANTITNUMBERYGAMES = 100;
+    public static final int QUANTITNUMBERYGAMEINFIVE = 10;
     //get a random number
     public static int randome(int k) {
         Random rand = new Random();
@@ -84,8 +87,6 @@ public class Engine {
     public static void logikaMenu(String choiseUser, String userName) {
         Scanner scanner = new Scanner(System.in);
         boolean resultGames = true;
-        var quantityGames = 3;
-        var quantityNumberforGames = 100;
         var gameOne = "1";
         var gameTwo = "2";
         var gameThree = "3";
@@ -94,7 +95,9 @@ public class Engine {
         var gameSix = "6";
 
 
-        for (int a = 0; a < quantityGames; a++) {
+
+
+        for (int a = 0; a < QUANTITYGAMES; a++) {
             if ((choiseUser.equalsIgnoreCase(gameOne))) {
                 resultGames = false;
                 break;
@@ -114,8 +117,8 @@ public class Engine {
                 }
             } else if ((choiseUser.equalsIgnoreCase(gameThree))) {
                 System.out.println("What is the result of the expression?");
-                int numberOne = randome(quantityNumberforGames);
-                int numberTwo = randome(quantityNumberforGames);
+                int numberOne = randome(QUANTITNUMBERYGAMES);
+                int numberTwo = randome(QUANTITNUMBERYGAMES);
                 char operator = getArandomOperator();
                 printNumber(numberOne, numberTwo, operator);
                 int answeUser = scanner.nextInt();
@@ -126,8 +129,8 @@ public class Engine {
                 }
             } else if ((choiseUser.equalsIgnoreCase(gameFour))) {
                 System.out.println("Find the greatest common divisor of given numbers.");
-                int numberOne = randome(quantityNumberforGames);
-                int numberTwo = randome(quantityNumberforGames);
+                int numberOne = randome(QUANTITNUMBERYGAMES);
+                int numberTwo = randome(QUANTITNUMBERYGAMES);
                 printNumber(numberOne, numberTwo);
                 int answeUser = scanner.nextInt();
                 printUserAnswer(answeUser);
@@ -138,10 +141,10 @@ public class Engine {
             } else if ((choiseUser.equalsIgnoreCase(gameFive))) {
                 System.out.println("What number is missing in the progression?");
 
-                var quantityNumbGameFive = 10;
-                int numberStep = randome(quantityNumbGameFive); // Шаг
 
-                int[] numbers = new int[quantityNumbGameFive];
+                int numberStep = randome(QUANTITNUMBERYGAMEINFIVE); // Шаг
+
+                int[] numbers = new int[QUANTITNUMBERYGAMEINFIVE];
                 int numbernot = randome(numbers.length - 1);
                 printNumber(numbers, numberStep, numbernot);
                 int answeUser = scanner.nextInt();
@@ -153,7 +156,7 @@ public class Engine {
                 }
             } else if ((choiseUser.equalsIgnoreCase(gameSix))) {
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-                int numberOne = randome(quantityNumberforGames);
+                int numberOne = randome(QUANTITNUMBERYGAMEINFIVE);
                 printNumber(numberOne);
                 String answeUser = scanner.next();
                 printUserAnswer(answeUser);

@@ -12,7 +12,6 @@ public class App {
         return "!";
     }
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
