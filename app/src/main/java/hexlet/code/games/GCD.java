@@ -31,8 +31,8 @@ public class GCD {
         int numberTwo;
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][NUMBERS + CORRECTANSWER];
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
-            number = (rand.nextInt(MAX_RANDOM_NUMBERS)); // генерируем случайное число
-            numberTwo = (rand.nextInt(MAX_RANDOM_NUMBERS)); // генерируем случайное число
+            number = (rand.nextInt(MAX_RANDOM_NUMBERS) + 1); // генерируем случайное число
+            numberTwo = (rand.nextInt(MAX_RANDOM_NUMBERS) + 1); // генерируем случайное число
             numberAndcorectAnswer[i][0] = Integer.toString(number); // записываем числа
             numberAndcorectAnswer[i][1] = Integer.toString(numberTwo); // записываем числа
             numberAndcorectAnswer[i][NUMBERS] = Integer.toString(calculateGCS(number, numberTwo));

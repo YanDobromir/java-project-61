@@ -18,7 +18,7 @@ public class Progression {
 
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
             int numberStep = (rand.nextInt(MAX_STEP) + 1); // Шаг
-            int notNumber = (rand.nextInt(NUMBERS) - 1); // отсутствующее число
+            int notNumber = (rand.nextInt(NUMBERS)); // отсутствующее число
             for (int r = 0; r < NUMBERS; r++) {
                 sum = sum + numberStep;
                 numberAndcorectAnswer[i][r] = Integer.toString(sum); // записываем число

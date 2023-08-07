@@ -27,7 +27,7 @@ public class Prime {
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][NUMBERS + CORRECTANSWER];
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
             for (int r = 0; r < NUMBERS; r++) { // кол-во цифр
-                number = (rand.nextInt(MAX_RANDOM_NUMBERS)); // генерируем случайное число
+                number = (rand.nextInt(MAX_RANDOM_NUMBERS) + 1); // генерируем случайное число
                 numberAndcorectAnswer[i][r] = Integer.toString(number); // записываем число
                 numberAndcorectAnswer[i][NUMBERS] = prime(number) ? "yes" : "no";
             }

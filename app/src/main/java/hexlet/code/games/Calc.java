@@ -36,7 +36,7 @@ public class Calc {
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
             number = (rand.nextInt(MAX_RANDOM_NUMBERS)); // генерируем случайное число
             operator = getArandomOperator();
-            numberTwo = (rand.nextInt(MAX_RANDOM_NUMBERS)); // генерируем случайное число
+            numberTwo = (rand.nextInt(MAX_RANDOM_NUMBERS) + 1); // генерируем случайное число
             numberAndcorectAnswer[i][0] = Integer.toString(number); // записываем число
             numberAndcorectAnswer[i][1] = charToString(operator); // записываем оператор
             numberAndcorectAnswer[i][2] = Integer.toString(numberTwo); // записываем второе число
