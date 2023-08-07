@@ -1,18 +1,15 @@
 package hexlet.code;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+
 import java.util.Scanner;
+
 public class App {
-
-    public static String getIntfromString(String choiseUserString) {
-        String[] choiseUserCorectOrnot = {"0", "1", "2", "3", "4", "5", "6"};
-        for (int i = 0; i < choiseUserCorectOrnot.length; i++) {
-            if (choiseUserString.equalsIgnoreCase(choiseUserCorectOrnot[i])) {
-                return choiseUserCorectOrnot[i];
-            }
-        }
-        return "!";
-    }
-
     public static void main(String[] args) {
+        String userName;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1" + " - Greet");
@@ -24,18 +21,33 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         String choiseUserString = scanner.next();
-        String correctChoise = getIntfromString(choiseUserString);
-        if (correctChoise.equalsIgnoreCase("0")) {
-            System.exit(0);
-        } else if (correctChoise.equalsIgnoreCase("!")) {
-            System.out.println("Your chois is not correct!");
-            System.exit(0);
+        switch (choiseUserString) {
+            case "1":
+                Cli.welcome();
+                break;
+            case "2":
+                userName = Cli.welcome();
+                Even.gameLogik(userName);
+                break;
+            case "3":
+                userName = Cli.welcome();
+                Calc.gameLogik(userName);
+                break;
+            case "4":
+                userName = Cli.welcome();
+                GCD.gameLogik(userName);
+                break;
+            case "5":
+                userName = Cli.welcome();
+                Progression.progression(userName);
+                break;
+            case "6":
+                userName = Cli.welcome();
+                Prime.gameLogik(userName);
+                break;
+            default:
+                System.exit(0);
         }
-
-        Cli.welcome();
-        String userName = Cli.getUserName();
-        System.out.println("Hello, " + userName + "!");
-        Engine.logikaMenu(choiseUserString, userName);
     }
 }
 
