@@ -25,7 +25,7 @@ public class GCD {
     public static void gcd() {
         int number;
         int numberTwo;
-        String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][1];
+        String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
             number = Util.gameRandome(MAX_RANDOM_NUMBERS); // генерируем случайное число
             numberTwo = Util.gameRandome(MAX_RANDOM_NUMBERS); // генерируем случайное число
