@@ -1,49 +1,46 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Random;
-import static hexlet.code.Engine.CORRECTANSWER;
+import hexlet.code.Util;
 import static hexlet.code.Engine.QUANTITYGAMES;
 
 public class Calc {
-    public static final int NUMBERS_OPERATOR = 3;
-    public static final String GAMERULEONE = ("What is the result of the expression?"); // правило игры
+    public static final String GAMERULEONE = ("What is the result of the expression?");
     private static final int MAX_RANDOM_NUMBERS = 20;
-    public static char getArandomOperator() {
-        Random rand = new Random();
-        char[] operator = {'+', '-', '*'};
-        var operatorChoise = (rand.nextInt(operator.length));
-        return operator[operatorChoise];
-    }
-    public static String charToString(char ch) {
-        return  new String(new char[]{ch});
+    private static final String[] OPERATORS = {"+", "-", "*"};
+    public static String gameLogik(int num1, int num2, String operator) {
+        var result = 0;
+        switch (operator) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            default:
+                break;
+        }
+        return String.valueOf(result);
     }
 
-    public static int truthAnswer(char x, int a, int b) {
-        if (x == '+') {
-            return a + b;
-        } else if (x == '-') {
-            return a - b;
-        } else {
-            return a * b;
-        }
-    }
-    public static void gameLogik(String username) {
-        Random rand = new Random();
+
+
+    public static void calc() {
         int number;
         int numberTwo;
-        char operator;
-        String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][NUMBERS_OPERATOR + CORRECTANSWER];
+        String operator;
+        String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
-            number = (rand.nextInt(MAX_RANDOM_NUMBERS)); // генерируем случайное число
-            operator = getArandomOperator();
-            numberTwo = (rand.nextInt(MAX_RANDOM_NUMBERS) + 1); // генерируем случайное число
-            numberAndcorectAnswer[i][0] = Integer.toString(number); // записываем число
-            numberAndcorectAnswer[i][1] = charToString(operator); // записываем оператор
-            numberAndcorectAnswer[i][2] = Integer.toString(numberTwo); // записываем второе число
-            numberAndcorectAnswer[i][NUMBERS_OPERATOR] = Integer.toString(truthAnswer(operator, number, numberTwo));
+            operator = OPERATORS[Util.gameRandome(OPERATORS.length - 1)];
+            number = (Util.gameRandome(MAX_RANDOM_NUMBERS)); // генерируем случайное число
+            numberTwo = Util.gameRandome(MAX_RANDOM_NUMBERS); // генерируем второе случайное число
+            numberAndcorectAnswer[i][0] = number + " " + operator + " " + numberTwo;
+            numberAndcorectAnswer[i][1] = gameLogik(number, numberTwo, operator);
 
         }
-        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer, username, NUMBERS_OPERATOR); // вызываем движок
+        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer); // вызываем движок
     }
 
 }

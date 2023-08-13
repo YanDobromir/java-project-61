@@ -4,12 +4,10 @@ import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
-
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        String userName;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1" + " - Greet");
@@ -26,24 +24,19 @@ public class App {
                 Cli.welcome();
                 break;
             case "2":
-                userName = Cli.welcome();
-                Even.gameLogik(userName);
+                Even.even();
                 break;
             case "3":
-                userName = Cli.welcome();
-                Calc.gameLogik(userName);
+                Calc.calc();
                 break;
             case "4":
-                userName = Cli.welcome();
-                GCD.gameLogik(userName);
+                GCD.gcd();
                 break;
             case "5":
-                userName = Cli.welcome();
-                Progression.progression(userName);
+                Progression.progression();
                 break;
             case "6":
-                userName = Cli.welcome();
-                Prime.gameLogik(userName);
+                Prime.prime();
                 break;
             default:
                 System.exit(0);
