@@ -7,6 +7,8 @@ public class Progression {
     public static final String GAME_FIVE_RULE = ("What number is missing in the progression?"); //rule for game
     public static final int NUMBERS = 8; //Quantity numbers for progression
     private static final int MAX_STEP = 10; //Max step
+
+    private static final int MAX_START = 100; //Max step
     public static String progressionlogics(int step, int notNumber, int start) {
         int sum = start; //number for start progression
         int correctAnswer = 0;
@@ -24,7 +26,7 @@ public class Progression {
         for (int i = 0; i < QUANTITYGAMES; i++) { //quantity games
             int numberStep = Util.gameRandome(MAX_STEP); //Step
             int notNumber = Util.gameRandome((NUMBERS) - 1); //
-            int start = Util.gameRandome(100); //start number for progression
+            int start = Util.gameRandome(MAX_START ); //start number for progression
             int sum = start;
             var result = new StringBuilder(); // create question
             for (int r = 0; r < NUMBERS; r++) {
