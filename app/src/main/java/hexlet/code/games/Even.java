@@ -7,7 +7,7 @@ public class Even {
     public static final String GAMERULEONE = ("Answer 'yes' if the number is even, otherwise answer 'no'.");
     private static final int MAX_RANDOM_NUMBERS = 20;
 
-    public static String getLogic(int num) {
+    public static String getLogics(int num) {
         return num % 2 == 0 ? "yes" : "no";
     }
     public static void even() {
@@ -16,9 +16,9 @@ public class Even {
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
             number = Util.gameRandome(MAX_RANDOM_NUMBERS);  // генерируем случайное число
             numberAndcorectAnswer[i][0] = Integer.toString(number); // записываем число
-            numberAndcorectAnswer[i][1] = getLogic(number);
+            numberAndcorectAnswer[i][1] = getLogics(number);
         }
-        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer); // вызываем движок
+        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer); // call the engine
     }
 }
 

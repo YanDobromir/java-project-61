@@ -7,10 +7,9 @@ import static hexlet.code.Engine.QUANTITYGAMES;
 import hexlet.code.Util;
 
 public class GCD {
-    public static final int NUMBERS = 2;
     public static final String GAMERULEONE = ("Find the greatest common divisor of given numbers."); // правило игры
     private static final int MAX_RANDOM_NUMBERS = 20;
-    public static int gameLogik(int a, int b) {
+    public static int gameLogics(int a, int b) {
         int nod = 1;
         int min;
         min = Math.min(a, b);
@@ -26,14 +25,14 @@ public class GCD {
         int number;
         int numberTwo;
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
-        for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
-            number = Util.gameRandome(MAX_RANDOM_NUMBERS); // генерируем случайное число
-            numberTwo = Util.gameRandome(MAX_RANDOM_NUMBERS); // генерируем случайное число
-            numberAndcorectAnswer[i][0] = number + " " + numberTwo; // записываем числа
-            numberAndcorectAnswer[i][1] = Integer.toString(gameLogik(number, numberTwo));
+        for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
+            number = Util.gameRandome(MAX_RANDOM_NUMBERS); //number one
+            numberTwo = Util.gameRandome(MAX_RANDOM_NUMBERS); //number two
+            numberAndcorectAnswer[i][0] = number + " " + numberTwo; //write numbers to array
+            numberAndcorectAnswer[i][1] = Integer.toString(gameLogics(number, numberTwo)); //write correct answer
 
         }
-        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer); // вызываем движок
+        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer); //call the engine
     }
 }
 

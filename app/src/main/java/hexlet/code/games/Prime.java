@@ -5,7 +5,7 @@ import static hexlet.code.Engine.QUANTITYGAMES;
 public class Prime {
     public static final String GAMERULEONE = ("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     private static final int MAX_RANDOM_NUMBERS = 20;
-    public static boolean gameLogik(int number) {
+    public static boolean gameLogics(int number) {
         boolean result = true;
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
@@ -18,11 +18,11 @@ public class Prime {
     public static void prime() {
         int number;
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
-        for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
-            number = Util.gameRandome(MAX_RANDOM_NUMBERS); // генерируем случайное число
-            numberAndcorectAnswer[i][0] = Integer.toString(number); // записываем число
-            numberAndcorectAnswer[i][1] = gameLogik(number) ? "yes" : "no";
+        for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
+            number = Util.gameRandome(MAX_RANDOM_NUMBERS);
+            numberAndcorectAnswer[i][0] = Integer.toString(number); //write number to array
+            numberAndcorectAnswer[i][1] = gameLogics(number) ? "yes" : "no"; //write correct answer to array
         }
-        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer); // вызываем движок
+        Engine.engineWorks(GAMERULEONE, numberAndcorectAnswer); // call the engine
     }
 }
