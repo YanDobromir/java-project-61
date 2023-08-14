@@ -7,10 +7,12 @@ public class Prime {
     private static final int MAX_RANDOM_NUMBERS = 20;
     public static boolean gameLogics(int number) {
         boolean result = true;
+        if (number == 1) {
+            return false;
+        }
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
-                result = false;
-                break;
+                return false;
             }
         }
         return result;

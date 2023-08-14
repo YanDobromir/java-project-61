@@ -26,7 +26,7 @@ public class Progression {
         for (int i = 0; i < QUANTITYGAMES; i++) { //quantity games
             int numberStep = Util.gameRandome(MAX_STEP); //Step
             int notNumber = Util.gameRandome((NUMBERS) - 1); //
-            int start = Util.gameRandome(MAX_START ); //start number for progression
+            int start = Util.gameRandome(MAX_START); //start number for progression
             int sum = start;
             var result = new StringBuilder(); // create question
             for (int r = 0; r < NUMBERS; r++) {
