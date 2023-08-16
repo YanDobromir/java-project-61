@@ -19,7 +19,7 @@ public class Even {
         String result;
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
         for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
-            number = Util.gameRandome(MAX_RANDOM_NUMBERS);  // генерируем случайное число
+            number = Util.getRandomeNumber(MAX_RANDOM_NUMBERS);  // генерируем случайное число
             isEven = getCorrectAnswer(number);
             result = isEven ? "yes" : "no";
             numberAndcorectAnswer[i][0] = Integer.toString(number); // записываем число

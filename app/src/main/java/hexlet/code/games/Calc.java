@@ -16,9 +16,9 @@ public class Calc {
         String operator;
         String[][] numberCorectAnswer = new String[QUANTITYGAMES][2];
         for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
-            operator = OPERATORS[Util.gameRandome(OPERATORS.length - 1)]; //operator
-            number = (Util.gameRandome(MAX_RANDOM_NUMBERS)); //number one
-            numberTwo = Util.gameRandome(MAX_RANDOM_NUMBERS); //number two
+            operator = OPERATORS[Util.getRandomeNumber(OPERATORS.length - 1)]; //operator
+            number = (Util.getRandomeNumber(MAX_RANDOM_NUMBERS)); //number one
+            numberTwo = Util.getRandomeNumber(MAX_RANDOM_NUMBERS); //number two
             numberCorectAnswer[i][0] = number + " " + operator + " " + numberTwo;
             numberCorectAnswer[i][1] = String.valueOf(giveCorrectAnswer(number, numberTwo, operator));
         }

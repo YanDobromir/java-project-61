@@ -17,7 +17,7 @@ public class Prime {
         String result;
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
         for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
-            number = Util.gameRandome(MAX_RANDOM_NUMBERS);
+            number = Util.getRandomeNumber(MAX_RANDOM_NUMBERS);
             isPrime = giveCorrectAnswer(number);
             result = isPrime ? "yes" : "no";
             numberAndcorectAnswer[i][0] = Integer.toString(number); //write number to array

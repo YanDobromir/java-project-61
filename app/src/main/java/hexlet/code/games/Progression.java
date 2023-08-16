@@ -11,14 +11,14 @@ public class Progression {
     private static final int MAX_START = 100; //Max step
 
     public static void getProgression() {
-        Engine.engineWorks(GAME_FIVE_RULE,getNumbersAnswer());
+        Engine.engineWorks(GAME_FIVE_RULE, getNumbersAnswer());
     }
     private static String[][] getNumbersAnswer() {
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
         for (int i = 0; i < QUANTITYGAMES; i++) { //quantity games
-            int numberStep = Util.gameRandome(MAX_STEP); //Step
-            int notNumber = Util.gameRandome((NUMBERS) - 1); //
-            int start = Util.gameRandome(MAX_START); //start number for progression
+            int numberStep = Util.getRandomeNumber(MAX_STEP); //Step
+            int notNumber = Util.getRandomeNumber((NUMBERS) - 1); //
+            int start = Util.getRandomeNumber(MAX_START); //start number for progression
             int sum = start;
             var result = new StringBuilder(); // create question
             for (int r = 0; r < NUMBERS; r++) {
