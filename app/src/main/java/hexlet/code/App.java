@@ -24,19 +24,19 @@ public class App {
                 Cli.welcome();
                 break;
             case "2":
-                Even.isEven();
+                Even.playEven();
                 break;
             case "3":
-                Calc.calculate();
+                Calc.playCalc();
                 break;
             case "4":
-                GCD.calculateGCD();
+                GCD.playGCD();
                 break;
             case "5":
-                Progression.getProgression();
+                Progression.playProgression();
                 break;
             case "6":
-                Prime.isPrime();
+                Prime.playPrime();
                 break;
             default:
                 System.exit(0);

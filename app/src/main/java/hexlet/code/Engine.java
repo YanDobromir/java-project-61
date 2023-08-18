@@ -2,6 +2,7 @@ package hexlet.code;
 import java.util.Scanner;
 public class Engine {
     public static final int QUANTITYGAMES = 3;
+
     public static void engineWorks(String gameruleone, String[][] numberAndcorectAnswer) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -24,7 +25,6 @@ public class Engine {
             }
         }
         System.out.println("Congratulations, " + userName + "!");
-
     }
 }
 
