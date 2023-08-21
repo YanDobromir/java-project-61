@@ -19,7 +19,7 @@ public class Prime {
         String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
         for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
             number = Util.getRandomeNumber(MAX_RANDOM_NUMBERS);
-            isPrime = doCheckNumber(number);
+            isPrime = isPrime(number);
             result = isPrime ? "yes" : "no";
             numberAndcorectAnswer[i][0] = Integer.toString(number); //write number to array
             numberAndcorectAnswer[i][1] = result; //write correct answer to array
@@ -27,7 +27,7 @@ public class Prime {
         return numberAndcorectAnswer;
     }
 
-    private static boolean doCheckNumber(int number) {
+    private static boolean isPrime(int number) {
         boolean result = true;
         if (number <= 1) {
             return false;

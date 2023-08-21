@@ -38,8 +38,10 @@ public class App {
             case "6":
                 Prime.playPrime();
                 break;
+            case "0":
+                break;
             default:
-                System.exit(0);
+                System.out.print("invalid input");
         }
     }
 }
