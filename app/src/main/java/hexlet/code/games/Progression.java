@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Util;
-import static hexlet.code.Engine.QUANTITYGAMES;
+import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
 
 public class Progression {
     private static final String GAME_FIVE_RULE = ("What number is missing in the progression?"); //rule for game
@@ -16,8 +16,8 @@ public class Progression {
     }
 
     private static String[][] getGameData() {
-        String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
-        for (int i = 0; i < QUANTITYGAMES; i++) { //quantity games
+        String[][] numberAndcorectAnswer = new String[NUMBER_OF_ROUNDS][2];
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) { //quantity games
             int numberStep = Util.getRandomeNumber(MAX_STEP); //Step
             int notNumber = Util.getRandomeNumber((NUMBERS) - 1); //missing number
             int start = Util.getRandomeNumber(MAX_START); //start number for progression

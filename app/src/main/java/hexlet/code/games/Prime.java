@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Util;
-import static hexlet.code.Engine.QUANTITYGAMES;
+import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
 
 public class Prime {
     private static final String GAMERULEONE = ("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
@@ -16,8 +16,8 @@ public class Prime {
         int number;
         boolean isPrime;
         String result;
-        String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
-        for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
+        String[][] numberAndcorectAnswer = new String[NUMBER_OF_ROUNDS][2];
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) { // quantity games
             number = Util.getRandomeNumber(MAX_RANDOM_NUMBERS);
             isPrime = isPrime(number);
             result = isPrime ? "yes" : "no";

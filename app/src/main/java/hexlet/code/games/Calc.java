@@ -1,9 +1,9 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Util;
-import static hexlet.code.Engine.QUANTITYGAMES;
+import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
 public class Calc {
-    private static final String GAMERULEONE = ("What is the result of the expression?"); //game rule
+    private static final String GAMERULEONE = ("What is the result of the expression?");
     private static final int MAX_RANDOM_NUMBERS = 20;
     private static final String[] OPERATORS = {"+", "-", "*"};
 
@@ -15,9 +15,9 @@ public class Calc {
         int number;
         int numberTwo;
         String operator;
-        String[][] numberCorectAnswer = new String[QUANTITYGAMES][2];
-        for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
-            operator = OPERATORS[Util.getRandomeNumber(OPERATORS.length - 1)]; //operator
+        String[][] numberCorectAnswer = new String[NUMBER_OF_ROUNDS][2];
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+            operator = OPERATORS[Util.getRandomeNumber(OPERATORS.length - 1)];
             number = (Util.getRandomeNumber(MAX_RANDOM_NUMBERS)); //number one
             numberTwo = Util.getRandomeNumber(MAX_RANDOM_NUMBERS); //number two
             numberCorectAnswer[i][0] = number + " " + operator + " " + numberTwo;

@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import static hexlet.code.Engine.QUANTITYGAMES;
+import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
 import hexlet.code.Util;
 
 public class GCD {
@@ -15,8 +15,8 @@ public class GCD {
     private static String[][] getGameData() {
         int number;
         int numberTwo;
-        String[][] numberAndcorectAnswer = new String[QUANTITYGAMES][2];
-        for (int i = 0; i < QUANTITYGAMES; i++) { // quantity games
+        String[][] numberAndcorectAnswer = new String[NUMBER_OF_ROUNDS][2];
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) { // quantity games
             number = Util.getRandomeNumber(MAX_RANDOM_NUMBERS); //number one
             numberTwo = Util.getRandomeNumber(MAX_RANDOM_NUMBERS); //number two
             numberAndcorectAnswer[i][0] = number + " " + numberTwo; //write numbers to array

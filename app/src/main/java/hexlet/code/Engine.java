@@ -1,7 +1,7 @@
 package hexlet.code;
 import java.util.Scanner;
 public class Engine {
-    public static final int QUANTITYGAMES = 3;
+    public static final int NUMBER_OF_ROUNDS = 3;
 
     public static void engineWorks(String gameruleone, String[][] numberAndcorectAnswer) {
         Scanner scanner = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(gameruleone);
 
-        for (int i = 0; i < QUANTITYGAMES; i++) { // кол-во игр
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             System.out.println("Question: " + numberAndcorectAnswer[i][0]);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
